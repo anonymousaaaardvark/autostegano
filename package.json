@@ -10,19 +10,22 @@
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
     "prettier:check": "prettier --check \"src/**/*.{ts,tsx,json}\" \"*.{js,json}\"",
     "prettier:fix": "prettier --write \"src/**/*.{ts,tsx,json}\" \"*.{js,json}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/anonymousaaaardvark/autostegano.git"
   },
   "author": "Andrew Yang",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://anonymousaaaardvark.github.io/autostegano",
   "dependencies": {
     "css-loader": "^6.7.3",
     "image-steganography-worker": "file:image-steganography-worker/pkg",
     "nouislider": "^15.7.0",
+    "pica": "^9.0.1",
     "rc-tooltip": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "@types/nouislider": "^9.0.10",
+    "@types/pica": "^9.0.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-slick": "^0.23.10",
@@ -45,6 +49,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "prettier": "2.8.4",
     "rc-slider": "^10.1.1",
     "ts-loader": "^9.4.2",
